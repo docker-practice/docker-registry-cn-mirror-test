@@ -6,8 +6,10 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      - name: Test
       - run: |
           registrys="
+          docker.io
           dockerhub.azk8s.cn
           reg-mirror.qiniu.com
           hub-mirror.c.163.com
@@ -19,7 +21,9 @@ jobs:
 
           for registry in $registrys
           do
-             docker pull $registry/$image || echo "!!! $registry is outdated !!!"
+             docker pull $registry/$image \
+               && echo -e "\033[32m$registry is good\033[0m"
+               || echo -e "\033[31m$registry is outdated\033[0m"
              docker rmi $registry/$image || true
           done
         env:
