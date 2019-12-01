@@ -1,0 +1,26 @@
+on: push
+
+name: CI
+
+jobs:
+  ci:
+    runs-on: ubuntu-latesst
+    steps:
+      - run: |
+          registrys="
+          dockerhub.azk8s.cn
+          reg-mirror.qiniu.com
+          hub-mirror.c.163.com
+          docker.mirrors.ustc.edu.cn
+          mirror.gcr.io
+          $ALIYUN_MIRROR
+          "
+          image="library/nginx:1.17.6-alpine"
+
+          for registry in $registrys
+          do
+             docker pull $registry/$image || echo "!!! $registry is outdated !!!"
+             docker rmi $registry/$image || true
+          done
+        env:
+          ALIYUN_MIRROR: ${{secrets.ALIYUN_MIRROR}}
