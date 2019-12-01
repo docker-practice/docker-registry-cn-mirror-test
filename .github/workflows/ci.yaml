@@ -9,6 +9,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      - uses: docker-practice/actions-setup-docker@master
       - run: docker version
       - run: docker info
       - name: Test
