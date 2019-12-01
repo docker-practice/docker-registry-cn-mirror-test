@@ -4,7 +4,7 @@ name: CI
 
 jobs:
   ci:
-    runs-on: ubuntu-latesst
+    runs-on: ubuntu-latest
     steps:
       - run: |
           registrys="
