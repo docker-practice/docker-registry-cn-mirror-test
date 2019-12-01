@@ -9,6 +9,8 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      - run: docker version
+      - run: docker info
       - name: Test
         run: |
           registrys="
