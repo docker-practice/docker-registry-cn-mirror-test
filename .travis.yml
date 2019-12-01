@@ -1,0 +1,9 @@
+language: shell
+
+services:
+- docker
+
+scripts:
+- docker version
+- docker info
+- docker pull nginx:1.17.6-alpine
