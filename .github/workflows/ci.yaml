@@ -29,7 +29,8 @@ jobs:
           do
              docker pull $registry/$image \
                && echo -e "\033[32m$registry is good\033[0m" \
-               || echo -e "\033[31m$registry is outdated\033[0m"
+               || (echo -e "\033[31m$registry is outdated\033[0m" \
+                  ; echo "::error file=README.md,line=1,col=0::$registry is outdated")
              docker rmi $registry/$image || true
           done
         env:
