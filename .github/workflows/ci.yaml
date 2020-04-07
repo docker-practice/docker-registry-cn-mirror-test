@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: '0 0 */1 * *'
 
-name: CI
+name: Test Registry
 
 jobs:
   ci:
@@ -17,7 +17,6 @@ jobs:
           registrys="
           docker.io
           registry-1.docker.io
-          dockerhub.azk8s.cn
           reg-mirror.qiniu.com
           hub-mirror.c.163.com
           docker.mirrors.ustc.edu.cn
