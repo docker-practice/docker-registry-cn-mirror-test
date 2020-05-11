@@ -17,13 +17,13 @@ jobs:
           registrys="
           docker.io
           registry-1.docker.io
-          reg-mirror.qiniu.com
+          mirror.baidubce.com
           hub-mirror.c.163.com
           docker.mirrors.ustc.edu.cn
           mirror.gcr.io
           $ALIYUN_MIRROR
           "
-          image="library/nginx:1.17.6-alpine"
+          image="library/nginx:1.18.0-alpine"
 
           for registry in $registrys
           do
