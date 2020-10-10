@@ -23,16 +23,18 @@ jobs:
           mirror.gcr.io
           $ALIYUN_MIRROR
           "
-          image="library/nginx:1.19.2-alpine"
+          image="library/nginx:1.19.3-alpine"
 
           for registry in $registrys
           do
+             echo ::group::Test $registry/$image
              docker pull $registry/$image \
                && (echo -e "\033[32m$registry is good\033[0m" \
                   ; echo "::warning file=README.md,line=1,col=0::OK [ $registry ] is good") \
                || (echo -e "\033[31m$registry is outdated\033[0m" \
                   ; echo "::error file=README.md,line=1,col=0::X [ $registry ] is outdated")
              docker rmi $registry/$image || true
+             echo ::endgroup::
           done
         env:
           ALIYUN_MIRROR: ${{secrets.ALIYUN_MIRROR}}
