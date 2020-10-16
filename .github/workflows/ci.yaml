@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: docker-practice/actions-setup-docker@master
+        with:
+          docker_channel: test
       - run: docker version
       - run: docker info
       - name: Test
