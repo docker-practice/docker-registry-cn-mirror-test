@@ -13,6 +13,7 @@ jobs:
         with:
           docker_version: "20.10"
           docker_channel: test
+          docker_buildx: false
       - run: docker version
       - run: docker info
       - name: Test
@@ -20,6 +21,7 @@ jobs:
           registrys="
           docker.io
           registry-1.docker.io
+          registry.hub.docker.com
           mirror.baidubce.com
           hub-mirror.c.163.com
           docker.mirrors.ustc.edu.cn
