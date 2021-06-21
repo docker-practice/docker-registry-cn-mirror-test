@@ -2,6 +2,7 @@ on:
   push:
   schedule:
     - cron: '0 0 */1 * *'
+  workflow_dispatch:  
 
 name: Test Registry
 
