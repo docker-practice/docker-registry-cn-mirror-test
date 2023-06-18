@@ -30,7 +30,7 @@ jobs:
           dockerproxy.com
           $ALIYUN_MIRROR
           "
-          image="library/nginx:1.24.0-alpine"
+          image="library/nginx:1.25.1-alpine"
 
           for registry in $registrys
           do
