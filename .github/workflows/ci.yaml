@@ -21,10 +21,17 @@ jobs:
         run: |
           registrys="
           dockerhub.icu
+          dockerhub.anzu.vip
+          dockerhub.timeweb.cloud
           docker.chenby.cn
           docker.1panel.live
+          docker.nastool.de
+          docker.agsv.top
+          docker.agsvpt.work
           docker.awsl9527.cn
           docker.anyhub.us.kg
+          docker.chenby.cn
+          docker.diliai.net
           dhub.kubesre.xyz
           docker.m.daocloud.io
           docker.1panel.live
