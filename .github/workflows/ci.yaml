@@ -20,6 +20,12 @@ jobs:
       - name: Test
         run: |
           registrys="
+          dockerhub.icu
+          docker.chenby.cn
+          docker.1panel.live
+          docker.awsl9527.cn
+          docker.anyhub.us.kg
+          dhub.kubesre.xyz
           docker.m.daocloud.io
           docker.1panel.live
           docker.jijiai.cn
