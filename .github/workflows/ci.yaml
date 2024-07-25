@@ -44,6 +44,8 @@ jobs:
           docker.mirrors.ustc.edu.cn
           mirror.gcr.io
           dockerproxy.com
+          hub.docker.com
+          qr3g6d8j.mirror.aliyuncs.com
           $ALIYUN_MIRROR
           "
           image="library/nginx:1.25.1-alpine"
