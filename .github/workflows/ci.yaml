@@ -20,6 +20,9 @@ jobs:
       - name: Test
         run: |
           registrys="
+          docker.m.daocloud.io
+          docker.1panel.live
+          docker.jijiai.cn
           docker.io
           registry-1.docker.io
           registry.hub.docker.com
