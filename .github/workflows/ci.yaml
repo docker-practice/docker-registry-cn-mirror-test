@@ -45,7 +45,7 @@ jobs:
           mirror.gcr.io
           dockerproxy.com
           hub.docker.com
-          qr3g6d8j.mirror.aliyuncs.com
+          registry.cn-hangzhou.aliyuncs.com
           $ALIYUN_MIRROR
           "
           image="nginx"
