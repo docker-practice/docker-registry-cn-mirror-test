@@ -48,7 +48,7 @@ jobs:
           qr3g6d8j.mirror.aliyuncs.com
           $ALIYUN_MIRROR
           "
-          image="xhofe/alist"
+          image="nginx"
 
           for registry in $registrys
           do
