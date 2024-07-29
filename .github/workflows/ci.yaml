@@ -46,6 +46,7 @@ jobs:
           dockerproxy.com
           hub.docker.com
           mirror.ccs.tencentyun.com
+          mirrors.huaweicloud.com
           $ALIYUN_MIRROR/zouhongqiang
           "
           image="nginx"
