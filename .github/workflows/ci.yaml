@@ -62,5 +62,26 @@ jobs:
              docker rmi $registry/$image || true
              echo ::endgroup::
           done
+          
+          IMAGE=busybox
+          MIRROR=https://dockerhub.icu
+          NUM_TRIALS=5
+
+          echo "Testing $MIRROR with $IMAGE"
+
+          total_time=0
+
+          for i in $(seq 1 $NUM_TRIALS); do
+          echo "Trial $i"
+          start_time=$(date +%s.%N)
+          docker pull $IMAGE
+          end_time=$(date +%s.%N)
+          elapsed_time=$(echo "$end_time - $start_time" | bc)
+          total_time=$(echo "$total_time + $elapsed_time" | bc)
+          docker rmi $IMAGE
+          done
+
+          average_time=$(echo "scale=2; $total_time / $NUM_TRIALS" | bc)
+          echo "Average pull time: $average_time seconds"
         env:
           ALIYUN_MIRROR: ${{secrets.ALIYUN_MIRROR}}
