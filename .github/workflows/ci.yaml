@@ -83,5 +83,6 @@ jobs:
 
           average_time=$(echo "scale=2; $total_time / $NUM_TRIALS" | bc)
           echo "Average pull time: $average_time seconds"
+          echo "::warning file=README.md,line=1,col=0::X [ $MIRROR ] is ok")
         env:
           ALIYUN_MIRROR: ${{secrets.ALIYUN_MIRROR}}
