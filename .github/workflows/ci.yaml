@@ -37,6 +37,8 @@ jobs:
           docker.1panel.live
           docker.jijiai.cn
           docker.io
+          dockermirror.nasspace.us.kg
+          cf-workers-docker-io-2cl.pages.dev
           registry-1.docker.io
           registry.hub.docker.com
           registry.linkease.net:5443
