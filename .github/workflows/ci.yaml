@@ -35,6 +35,7 @@ jobs:
           dhub.kubesre.xyz
           docker.m.daocloud.io
           docker.1panel.live
+          docker.1ms.run
           docker.jijiai.cn
           docker.io
           dockermirror.nasspace.us.kg
