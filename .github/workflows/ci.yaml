@@ -20,17 +20,8 @@ jobs:
       - name: Test
         run: |
           registrys="
-          dockerhub.icu
-          dockerhub.anzu.vip
           dockerhub.timeweb.cloud
-          docker.chenby.cn
           docker.1panel.live
-          docker.nastool.de
-          docker.agsv.top
-          docker.agsvpt.work
-          docker.awsl9527.cn
-          docker.anyhub.us.kg
-          docker.chenby.cn
           docker.diliai.net
           dhub.kubesre.xyz
           docker.m.daocloud.io
@@ -51,7 +42,6 @@ jobs:
           hub.docker.com
           mirror.ccs.tencentyun.com
           mirrors.huaweicloud.com
-          $ALIYUN_MIRROR/zouhongqiang
           "
           image="nginx"
 
