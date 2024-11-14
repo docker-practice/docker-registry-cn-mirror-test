@@ -22,21 +22,16 @@ jobs:
           registrys="
           dockerhub.timeweb.cloud
           docker.1panel.live
-          docker.diliai.net
           dhub.kubesre.xyz
           docker.m.daocloud.io
-          docker.1panel.live
           docker.1ms.run
-          docker.jijiai.cn
           docker.io
           docker.fxxk.dedyn.io
           cf-workers-docker-io-2cl.pages.dev
           registry-1.docker.io
-          registry.hub.docker.com
           registry.linkease.net:5443
           mirror.baidubce.com
           hub-mirror.c.163.com
-          docker.mirrors.ustc.edu.cn
           mirror.gcr.io
           dockerproxy.com
           hub.docker.com
