@@ -28,9 +28,10 @@ jobs:
           docker.mirrors.ustc.edu.cn
           mirror.gcr.io
           dockerproxy.com
+          hub.atomgit.com
           $ALIYUN_MIRROR
           "
-          image="library/nginx:1.25.1-alpine"
+          image="library/nginx:1.27.2-alpine"
 
           for registry in $registrys
           do
