@@ -20,21 +20,21 @@ jobs:
       - name: Test
         run: |
           registrys="
+          cf-workers-docker-io-2cl.pages.dev
           dockerhub.timeweb.cloud
-          docker.1panel.live
           dhub.kubesre.xyz
           docker.m.daocloud.io
           docker.1ms.run
           docker.io
           docker.fxxk.dedyn.io
-          cf-workers-docker-io-2cl.pages.dev
+          dockerproxy.com
+          hub-mirror.c.163.com
+          hub.atomgit.com
+          hub.docker.com
           registry-1.docker.io
           registry.linkease.net:5443
           mirror.baidubce.com
-          hub-mirror.c.163.com
           mirror.gcr.io
-          dockerproxy.com
-          hub.docker.com
           mirror.ccs.tencentyun.com
           mirrors.huaweicloud.com
           "
