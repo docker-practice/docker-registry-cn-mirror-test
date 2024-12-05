@@ -32,7 +32,6 @@ jobs:
           hub.atomgit.com
           hub.docker.com
           registry-1.docker.io
-          registry.linkease.net:5443
           mirror.baidubce.com
           mirror.gcr.io
           mirror.ccs.tencentyun.com
@@ -71,7 +70,6 @@ jobs:
           done
 
           average_time=$(echo "scale=2; $total_time / $NUM_TRIALS" | bc)
-          echo "Average pull time: $average_time seconds"
-          echo "::info $MIRROR is ok"
+          echo "::warning $MIRROR is ok Average pull time: $average_time seconds "
         env:
           ALIYUN_MIRROR: ${{secrets.ALIYUN_MIRROR}}
