@@ -34,10 +34,10 @@ jobs:
           registry-1.docker.io
           mirror.baidubce.com
           mirror.gcr.io
-          mirror.ccs.tencentyun.com
           mirrors.huaweicloud.com
+          $ALIYUN_MIRROR
           "
-          image="nginx"
+          image="library/nginx:1.27.2-alpine"
 
           for registry in $registrys
           do
