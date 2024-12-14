@@ -8,7 +8,7 @@ name: Test Registry
 
 jobs:
   ci:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: docker-practice/actions-setup-docker@master
         with:
@@ -28,11 +28,11 @@ jobs:
           docker.io
           docker.fxxk.dedyn.io
           dockerproxy.com
+          hub.iyuu.cn
           hub-mirror.c.163.com
           hub.atomgit.com
           hub.docker.com
           registry-1.docker.io
-          mirror.baidubce.com
           mirror.gcr.io
           mirrors.huaweicloud.com
           $ALIYUN_MIRROR
