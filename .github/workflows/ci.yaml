@@ -32,6 +32,7 @@ jobs:
           hub-mirror.c.163.com
           hub.atomgit.com
           hub.docker.com
+          registry.docker.com
           registry-1.docker.io
           mirror.gcr.io
           $ALIYUN_MIRROR
