@@ -23,7 +23,6 @@ jobs:
           cjie.eu.org
           cf-workers-docker-io-2cl.pages.dev
           dockerhub.timeweb.cloud
-          # dhub.kubesre.xyz  
           docker.ketches.cn
           docker.m.daocloud.io
           docker.1ms.run
