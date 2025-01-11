@@ -20,9 +20,10 @@ jobs:
       - name: Test
         run: |
           registrys="
+          cjie.eu.org
           cf-workers-docker-io-2cl.pages.dev
           dockerhub.timeweb.cloud
-          dhub.kubesre.xyz
+          # dhub.kubesre.xyz  //  Error response from daemon: toomanyrequests: You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limit
           docker.ketches.cn
           docker.m.daocloud.io
           docker.1ms.run
