@@ -8,7 +8,7 @@ name: Test Registry
 
 jobs:
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: docker-practice/actions-setup-docker@master
         with:
@@ -20,15 +20,22 @@ jobs:
       - name: Test
         run: |
           registrys="
+          cjie.eu.org
+          cf-workers-docker-io-2cl.pages.dev
+          dockerhub.timeweb.cloud
+          docker.ketches.cn
+          docker.m.daocloud.io
+          docker.1ms.run
           docker.io
-          registry-1.docker.io
-          registry.hub.docker.com
-          mirror.baidubce.com
-          hub-mirror.c.163.com
-          docker.mirrors.ustc.edu.cn
-          mirror.gcr.io
+          docker.fxxk.dedyn.io
           dockerproxy.com
+          hub.iyuu.cn
+          hub-mirror.c.163.com
           hub.atomgit.com
+          hub.docker.com
+          registry.docker.com
+          registry-1.docker.io
+          mirror.gcr.io
           $ALIYUN_MIRROR
           "
           image="library/nginx:1.27.2-alpine"
@@ -44,5 +51,26 @@ jobs:
              docker rmi $registry/$image || true
              echo ::endgroup::
           done
+          
+          IMAGE=busybox
+          MIRROR=https://dockerhub.icu
+          NUM_TRIALS=5
+
+          echo "Testing $MIRROR with $IMAGE"
+
+          total_time=0
+
+          for i in $(seq 1 $NUM_TRIALS); do
+          echo "Trial $i"
+          start_time=$(date +%s.%N)
+          docker pull $IMAGE
+          end_time=$(date +%s.%N)
+          elapsed_time=$(echo "$end_time - $start_time" | bc)
+          total_time=$(echo "$total_time + $elapsed_time" | bc)
+          docker rmi $IMAGE
+          done
+
+          average_time=$(echo "scale=2; $total_time / $NUM_TRIALS" | bc)
+          echo "::warning $MIRROR is ok Average pull time: $average_time seconds "
         env:
           ALIYUN_MIRROR: ${{secrets.ALIYUN_MIRROR}}
