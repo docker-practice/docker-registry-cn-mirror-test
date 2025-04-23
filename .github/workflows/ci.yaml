@@ -8,7 +8,7 @@ name: Test Registry
 
 jobs:
   ci:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: docker-practice/actions-setup-docker@master
         with:
