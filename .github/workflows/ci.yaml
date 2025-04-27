@@ -10,11 +10,11 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker-practice/actions-setup-docker@master
+      - name: Set up Docker
+        uses: docker/setup-docker-action@v4
         with:
-          docker_version: "20.10"
-          docker_channel: test
-          docker_buildx: false
+          version: "26.1.4"
+          channel: test
       - run: docker version
       - run: docker info
       - name: Test
@@ -30,6 +30,7 @@ jobs:
           docker.fxxk.dedyn.io
           dockerproxy.com
           hub.iyuu.cn
+          hub.registry-mirrors.top
           hub-mirror.c.163.com
           hub.atomgit.com
           hub.docker.com
@@ -38,7 +39,7 @@ jobs:
           mirror.gcr.io
           $ALIYUN_MIRROR
           "
-          image="library/nginx:1.27.2-alpine"
+          image="library/busybox:1.36.1"
 
           for registry in $registrys
           do
